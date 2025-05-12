@@ -1,0 +1,112 @@
+#include <stdio.h>
+int main(){
+
+    // PROGRAM UNTUK KAKAK TINGKAT - Pemisahan Pemain Sesuai Role Mobile Legends
+
+    //DEKLARASI
+    int n, nomor; //variabel n untuk jumlah pemain dan variabel nomor untuk nomor urut
+    char namaPemain[100][50]; //array untuk menyimpan nama pemain
+    char rolePemain[5][10]; //array untuk menyimpan role pemain
+
+    //ALGORITMA
+
+    //Input Jumlah Pemain
+    printf("Masukkan jumlah pemain:"); //program menampilkan teks "Masukkan jumlah pemain:"
+    scanf("%d", &n); //program mengambil input data integer untuk jumlah pemain
+
+    printf("Masukkan nama pemain (role):\n"); //program menampilkan teks "Masukkan nama pemain (role):"
+
+    //Input Data Pemain
+    for(int i = 0; i < n; i++) //loop for digunakan untuk terus mengulang pengguna menginput data pemain sampai jumlah tertentu
+    {
+        //program mengambil input data integer dan string dan menyimpannya ke dalam array nama pemain dan role pemain
+        scanf(" %*d. %s (%s)", namaPemain[i], rolePemain[i]); 
+    }
+
+    //Proses dan Output Pemain dengan role "Exp"
+    printf("Exp\n"); //program menampilkan teks "Exp"
+    nomor = 1; //nomor urut untuk pemain dengan role exp diisi dengan nilai awal 1
+    for(int i = 0; i < n; i++) //loop for digunakan untuk memeriksa setiap pemain secara otomatis
+    {
+        //kondisi if digunakan untuk mengecek apakah role pemain adalah "Exp"
+        if((rolePemain[i][0] == 'E' || rolePemain[i][0] == 'e') && //operator perbandingan == digunakan untuk memeriksa apakah setiap karakter dalam role sesuai 
+           (rolePemain[i][1] == 'X' || rolePemain[i][1] == 'x') && //operator logika || digunakan untuk mengabaikan perbedaan huruf besar/kecil pada karakter
+           (rolePemain[i][2] == 'P' || rolePemain[i][2] == 'p')) //operator logika && memastikan semua karakter cocok agar dianggap sebagai role exp
+       {
+        //jika role pemain adalah "exp" maka,
+        printf("%d. %s\n", nomor, namaPemain[i]); //program menampilkan daftar pemain exp
+        nomor ++; //nomor urut pemain akan bertambah untuk pemain berikutnya yang memiliki role exp
+       }
+    }
+
+    //Proses dan Output Pemain dengan role Mid
+    printf("Mid\n"); //program menampilkan teks "Mid"
+    nomor = 1; //nomor urut untuk pemain dengan role mid diisi dengan nilai awal 1
+    for(int i = 0; i < n; i++) //loop for digunakan untuk memeriksa setiap pemain secara otomatis
+    {
+        //kondisi if digunakan untuk mengecek apakah role pemain adalah "Mid"
+        if((rolePemain[i][0] == 'M' || rolePemain[i][0] == 'm') && //operator perbandingan == digunakan untuk memeriksa apakah setiap karakter dalam role sesuai 
+           (rolePemain[i][1] == 'I' || rolePemain[i][1] == 'i') && //operator logika || digunakan untuk mengabaikan perbedaan huruf besar/kecil pada karakter
+           (rolePemain[i][2] == 'D' || rolePemain[i][2] == 'd')) //operator logika && memastikan semua karakter cocok agar dianggap sebagai role mid
+       {
+        //jika role pemain adalah "mid" maka,
+        printf("%d. %s\n", nomor, namaPemain[i]); //program menampilkan daftar pemain mid
+        nomor ++; //nomor urut pemain akan bertambah untuk pemain berikutnya yang memiliki role mid
+       }
+    }
+
+    //Proses dan Output Pemain dengan role Gold
+    printf("Gold\n"); //program menampilkan teks "Gold"
+    nomor = 1; //nomor urut untuk pemain dengan role gold diisi dengan nilai awal 1
+    for(int i = 0; i < n; i++) //loop for digunakan untuk memeriksa setiap pemain secara otomatis
+    {
+        //kondisi if digunakan untuk mengecek apakah role pemain adalah "Gold"
+       if((rolePemain[i][0] == 'G' || rolePemain[i][0] == 'g') && //operator perbandingan == digunakan untuk memeriksa apakah setiap karakter dalam role sesuai 
+          (rolePemain[i][1] == 'O' || rolePemain[i][1] == 'o') && //operator logika || digunakan untuk mengabaikan perbedaan huruf besar/kecil pada karakter
+          (rolePemain[i][2] == 'l' || rolePemain[i][2] == 'l') && //operator logika && memastikan semua karakter cocok agar dianggap sebagai role exp
+          (rolePemain[i][3] == 'D' || rolePemain[i][3] == 'd'))
+       {
+        //jika role pemain adalah "gold" maka,
+        printf("%d. %s\n", nomor, namaPemain[i]); //program menampilkan daftar pemain gold
+        nomor ++; //nomor urut pemain akan bertambah untuk pemain berikutnya yang memiliki role gold
+       }
+    }
+
+    //Proses dan Output Pemain dengan role Jungle
+    printf("Jungle\n"); //program menampilkan teks "Jungle"
+    nomor = 1; //nomor urut untuk pemain dengan role jungle diisi dengan nilai awal 1
+    for(int i = 0; i < n; i++) //loop for digunakan untuk memeriksa setiap pemain secara otomatis
+    {
+       //kondisi if digunakan untuk mengecek apakah role pemain adalah "Jungle"
+       if((rolePemain[i][0] == 'J' || rolePemain[i][0] == 'j') && //operator perbandingan == digunakan untuk memeriksa apakah setiap karakter dalam role sesuai 
+          (rolePemain[i][1] == 'U' || rolePemain[i][1] == 'u') && //operator logika || digunakan untuk mengabaikan perbedaan huruf besar/kecil pada karakter
+          (rolePemain[i][2] == 'N' || rolePemain[i][2] == 'n') && //operator logika && memastikan semua karakter cocok agar dianggap sebagai role jungle
+          (rolePemain[i][3] == 'G' || rolePemain[i][3] == 'g') &&
+          (rolePemain[i][4] == 'L' || rolePemain[i][4] == 'l') &&
+          (rolePemain[i][5] == 'E' || rolePemain[i][5] == 'e'))
+       {
+        //jika role pemain adalah "jungle" maka,
+        printf("%d. %s\n", nomor, namaPemain[i]); //program menampilkan daftar pemain jungle
+        nomor ++; //nomor urut pemain akan bertambah untuk pemain berikutnya yang memiliki role jungle
+       }
+    }
+
+    //Proses dan Output Pemain dengan role Roam
+    printf("Roam\n"); //program menampilkan teks "Roam"
+    nomor = 1; //nomor urut untuk pemain dengan role roam diisi dengan nilai awal 1
+    for(int i = 0; i < n; i++) //loop for digunakan untuk memeriksa setiap pemain secara otomatis
+    {
+       //kondisi if digunakan untuk mengecek apakah role pemain adalah "Roam"
+       if((rolePemain[i][0] == 'R' || rolePemain[i][0] == 'r') && //operator perbandingan == digunakan untuk memeriksa apakah setiap karakter dalam role sesuai 
+          (rolePemain[i][1] == 'O' || rolePemain[i][1] == 'o') && //operator logika || digunakan untuk mengabaikan perbedaan huruf besar/kecil pada karakter
+          (rolePemain[i][2] == 'A' || rolePemain[i][2] == 'a') && //operator logika && memastikan semua karakter cocok agar dianggap sebagai role roam
+          (rolePemain[i][3] == 'M' || rolePemain[i][3] == 'm'))
+       {
+       //jika role pemain adalah "roam" maka,
+        printf("%d. %s\n", nomor, namaPemain[i]); //program menampilkan daftar pemain roam
+        nomor ++; //nomor urut pemain akan bertambah untuk pemain berikutnya yang memiliki role roam
+       }
+    }
+
+    return 0;
+}
