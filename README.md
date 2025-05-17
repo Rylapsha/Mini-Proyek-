@@ -19,11 +19,14 @@
   - Pengelompokan pemain berdasarkan role
   - Output nama pemain di kelompok role 
 - Konsep yang digunakan:
-  - Input/Output
-  - Variabel
-  - If-else
-  - Loop (perulangan)
-  - Fungsi
-  - Array
+•	Untuk membuat program ini, saya hanya menggunakan satu fungsi utama, yaitu fungsi main(). 
+•	Saya menggunakan scanf() untuk menerima input dari pengguna sebagai kebutuhan program ini yang membutuhkan nama dan role pemain. Selain input, saya juga menggunakan printf() sebagai output program untuk menampilkan teks daftar pemain dipisahkan berdasarkan kelompok rolenya.  
+•	Selanjutnya, saya mendeklarasikan beberapa variabel untuk menyimpan data yang masing-masingnya menyimpan tipe data berbeda yakni, yang pertama bertipe integer untuk data jumlah pemain dan nomor urut, lalu yang kedua bertipe char untuk nama pemain dan role pemain. 
+•	Untuk membuat variabel bertipe char bisa menyimpan string, saya membutuhkan array. Array yang digunakan untuk menyimpan string ialah array dua dimensi. Selain berfungsi untuk menyimpan string, array pada program ini juga berfungsi untuk menyimpan nama pemain dan role pemain dalam indeks masing-masing. 
+•	Terakhir saya menggunakan looping (perulangan) for untuk memproses seluruh daftar pemain tanpa harus menuliskan kode berulang, di antaranya saya menggunakan untuk proses input pemain, pengelompokan pemain dan saat menampilkan daftar pemain berdasarkan role. 
+•	Di dalam loop saya menambahkan percabangan if untuk membuat program memeriksa role pemain berada di kelompok yang sesuai.
+•	Fitur tambahan : 
+Saya membuat program bisa membaca jumlah pemain yang diinginkan oleh pengguna menggunakan scanf() sehingga input akan berhenti ketika jumlah sudah sesuai.
+
     
 ## Link Video Demo
